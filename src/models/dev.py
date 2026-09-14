@@ -7,7 +7,7 @@ class Desenvolvedor(Funcionario):
     
     def calcular_bonus(self):
         taxa = 10
-        bonus = (self._salario / 100) * taxa
+        bonus = (self.salario / 100) * taxa
     
         return f'R${bonus:,.2f}'
 

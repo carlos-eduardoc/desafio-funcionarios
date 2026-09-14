@@ -7,6 +7,6 @@ class Gerente(Funcionario):
      
     def calcular_bonus(self):
         taxa = 15
-        bonus = (self._salario / 100) * taxa
+        bonus = (self.salario / 100) * taxa
             
         return f'R${bonus:,.2f}'
