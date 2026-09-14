@@ -6,12 +6,12 @@ class Funcionario(ABC):
         self._salario = salario
     
     def __str__(self):
-        return f'O {self.__class__.__name__} tem o salario de {self.salario} e por ser {self.__class__.__name__} tem o bonus de {self.calcular_bonus()}'
+        return f'O {self.__class__.__name__} tem o salario de R${self.salario:,.2f} e por ser {self.__class__.__name__} tem o bonus de {self.calcular_bonus()}'
     
     
     @property
     def salario(self):
-        return f'R${self._salario:,.2f}'
+        return self.__salario
     
     @salario.setter
     def salario(self, valor):
