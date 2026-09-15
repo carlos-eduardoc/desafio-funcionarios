@@ -3,16 +3,19 @@ from models.dev import Desenvolvedor
 from models.designer import Designer
 from models.gerente import Gerente
 from services.ProcessarBonus import processar_bonus
+from rich import inspect
+
 
 def main():
     f1 = Desenvolvedor('Carlos', 3000)
     f2 = Designer('Joana', 2800)
     f3 = Gerente('Fabio', 5500)
     
-    try:
-        f1.salario = 1700
-    except Exception as ex:
-        print(ex)
+    f1.salario = 4000
+    inspect(f1, private=True, methods=True)
+        
+    f2.salario = 3020
+    inspect(f2, private=True, methods=True)
     
     print('-' * 5 + 'DESENVOLVEDOR' + '-' * 5)
     try:
@@ -36,7 +39,8 @@ def main():
         print(f3)
     except Exception as ex:
         print(ex)
-        
+    
+    
 
 if __name__ == '__main__':
     main()
