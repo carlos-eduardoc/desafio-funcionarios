@@ -12,10 +12,9 @@ def main():
     f3 = Gerente('Fabio', 5500)
     
     f1.salario = 4000
-    inspect(f1, private=True, methods=True)
-        
+    
     f2.salario = 3020
-    inspect(f2, private=True, methods=True)
+   
     
     print('-' * 5 + 'DESENVOLVEDOR' + '-' * 5)
     try:
