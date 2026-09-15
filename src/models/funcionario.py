@@ -3,7 +3,8 @@ from abc import ABC, abstractmethod
 class Funcionario(ABC):
     def __init__(self, nome, salario):
         self.nome = nome
-        self._salario = salario
+        self.__salario = salario
+    
     
     def __str__(self):
         return f'O {self.nome} tem o salario de R${self.salario:,.2f} e por ser {self.__class__.__name__} tem o bonus de {self.calcular_bonus()}'
@@ -15,7 +16,7 @@ class Funcionario(ABC):
     
     @salario.setter
     def salario(self, valor):
-        if valor < self._salario:
+        if valor < self.__salario:
             raise ValueError('Você não pode reduzir o salario do funcionario')
         self.__salario = valor
     
