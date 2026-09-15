@@ -1,0 +1,2 @@
+crie a clase Funcionario abstrata com os atributos nome publico e o salario privado, com o metodo abstrato
+de calcular bonus, teria 3 profissoes gerente, dev e designer cada um com taxas diferentes.
