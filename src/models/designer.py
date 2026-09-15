@@ -10,3 +10,7 @@ class Designer(Funcionario):
         bonus = (self.salario / 100) * taxa
             
         return f'R${bonus:,.2f}' 
+    
+    
+    def __str__(self):
+        return super().__str__()
